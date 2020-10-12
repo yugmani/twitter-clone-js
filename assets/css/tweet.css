@@ -1,3 +1,20 @@
+.tweets-welcome-message {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  visibility: visible;
+}
+
+.tweets-welcome-message h5 {
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.tweets-welcome-message p {
+  font-size: 10px;
+  padding: 10px;
+}
+
 .tweet-container {
   display: flex;
   flex-direction: column;
