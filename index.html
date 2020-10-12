@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter-Clone</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/tweet.css">
     <script src="https://kit.fontawesome.com/ca33be108d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" ></script>
 </head>
 <body>
     <div class="container home-page">
@@ -26,16 +28,88 @@
         <div class="main">
             <div class="tweets-search-container">
                 <input id="user-search-input" type="text" placeholder="Search Twitter">
-                <i class="fas fa-search fa-flip-horizontal"></i>
+                <i class="fas fa-search fa-flip-horizontal" id='searchIcon'></i>
             </div>
             <div class="tweets-list">
                 <div class="tweet-container">
+                    <div class="tweet-user-info">
+                        <div class="tweet-user-profile"></div>
+                        <div class="tweet-user-name-container">
+                            <div class="tweet-user-fullname">
+                                Yoog Gurung
+                            </div>
+                            <div class="tweet-user-username">
+                                @maniYoog
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="tweet-video-container">
+                        <video controls>
+                            <source src="https://player.vimeo.com/external/326039223.sd.mp4?s=14b7be196f986aac76330a3e3ec2697db7b20d8a&profile_id=164&oauth2_token_id=57447761" type='video/mp4'>
+                        </video>
+                    </div>
+                    
+                    <!-- <div class="tweet-images-container">
+                        <div class="tweet-image" style='background-image:url(https://images.unsplash.com/photo-1602341612227-1612891401ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)''></div>
+                        <div class="tweet-image" style='background-image:url(https://images.unsplash.com/photo-1602341612227-1612891401ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)'></div>
+                        <div class="tweet-image"style='background-image:url(https://images.unsplash.com/photo-1602341612227-1612891401ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)'></div>
+                        <div class="tweet-image" style='background-image:url(https://images.unsplash.com/photo-1602341612227-1612891401ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)'></div>
+                    </div> -->
+                    <div class="tweet-text-container">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi dolorum sunt enim possimus reprehenderit fugit quisquam. Nisi et corrupti eos, maiores tempora, iste voluptatibus eligendi adipisci maxime harum optio quam?
+                    </div>
+                    <div class="tweet-date-container">
+                        20 hrs ago
+                    </div>
                 </div>
+                <div class="tweet-container">
+                    <div class="tweet-user-info">
+                        <div class="tweet-user-profile"></div>
+                        <div class="tweet-user-name-container">
+                            <div class="tweet-user-fullname">
+                                Yoog Gurung
+                            </div>
+                            <div class="tweet-user-username">
+                                @maniYoog
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="tweet-video-container">
+                        <video controls>
+                            <source src="https://player.vimeo.com/external/326039223.sd.mp4?s=14b7be196f986aac76330a3e3ec2697db7b20d8a&profile_id=164&oauth2_token_id=57447761" type='video/mp4'>
+                        </video>
+                    </div> -->
+                    
+                    <div class="tweet-images-container">
+                        <div class="tweet-image" style='background-image:url(https://images.unsplash.com/photo-1602341612227-1612891401ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)''></div>
+                        <div class="tweet-image" style='background-image:url(https://images.unsplash.com/photo-1602341612227-1612891401ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)'></div>
+                        <div class="tweet-image"style='background-image:url(https://images.unsplash.com/photo-1602341612227-1612891401ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)'></div>
+                        <div class="tweet-image" style='background-image:url(https://images.unsplash.com/photo-1602341612227-1612891401ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)'></div>
+                    </div>
+                    <div class="tweet-text-container">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi dolorum sunt enim possimus reprehenderit fugit quisquam. Nisi et corrupti eos, maiores tempora, iste voluptatibus eligendi adipisci maxime harum optio quam?
+                    </div>
+                    <div class="tweet-date-container">
+                        20 hrs ago
+                    </div>
+                </div>
+                
             </div>
         </div>
     <div class="tweets-sidebar-container">
-        <div class="tweets-sidebar"></div>
+        <div class="tweets-sidebar">
+            <div class="tweets-trending">
+                <h5>Trends for you</h5>
+                <ul>
+                    <li>#Coding</li>
+                    <li>#JavaScript</li>
+                    <li>#Python</li>
+                    
+                </ul>
+            </div>
+        </div>
 
     </div>
 
