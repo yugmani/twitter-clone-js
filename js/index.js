@@ -1,6 +1,7 @@
 const URL = "http://localhost:3000/tweets";
  // const url = 'http://localhost:3000/tweets?q=coding&count=10';
 
+
 let nextPageUrl = null;
 
 const onEnter = (e)=>{
@@ -19,6 +20,7 @@ const onNextPage = ()=>{
  * Retrive Twitter Data from API
  */
 const getTwitterData = (nextPage=false) => {
+    
     const query = document.getElementById("user-search-input").value;
     const encodedQuery = encodeURIComponent(query);
    if(query){
@@ -30,6 +32,7 @@ const getTwitterData = (nextPage=false) => {
             return response.json();
         }).then((data)=>{
             // console.log(data);
+            
             buildTweets(data.statuses, nextPage);
             saveNextPage(data.search_metadata);
             nextPageButtonVisibility(data.search_metadata);
@@ -80,6 +83,7 @@ const nextPageButtonVisibility = (metadata) => {
  */
 const buildTweets = (tweets, nextPage) => {
     let twitterContent = "";
+  
     tweets.map((tweet) =>{
         const created = moment(tweet.created_at);
         const createdDate = moment(created).fromNow();
@@ -114,11 +118,12 @@ const buildTweets = (tweets, nextPage) => {
 
     if(nextPage){
         document.querySelector('.tweets-list').insertAdjacentHTML('beforeend', twitterContent);
-        document.querySelector('.tweets-welcome-message').style.visibility = "hidden";
+        
     } else {
     document.querySelector('.tweets-list').innerHTML = twitterContent;
-    document.querySelector('.tweets-welcome-message').style.visibility = "hidden";
+    
     }
+    
 }
 
 /**
