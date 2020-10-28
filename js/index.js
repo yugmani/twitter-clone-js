@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000/tweets";
+const URL = "https://ymg-twitter-api.herokuapp.com";
  // const url = 'http://localhost:3000/tweets?q=coding&count=10';
 
 
@@ -135,7 +135,7 @@ let imagesContent = `<div class="tweet-images-container">`
 mediaList.map((media)=>{
     if(media.type=='photo'){
         imageExists = true;
-        imagesContent += `<div class="tweet-image" style="background-image:url(${media.media_url_https}")></div>`
+        imagesContent += `<div class="tweet-image" style="background-image:url(${media.media_url_https})"></div>`
         
     }
 });
